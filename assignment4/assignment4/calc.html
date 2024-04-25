@@ -1,0 +1,180 @@
+<html>
+<head>
+    <title>calculator</title>
+</head>
+
+<body>
+    <center>
+    <header style="height: 50px; width: 50px; text-align: center;">
+          Calulator
+    </header>
+</center>
+<center>
+    <table>
+      <tr>
+         <td>Enter number 1</td>
+         <td>
+            <input type="number" id="num1">
+         </td>
+         <td>
+            <div style="color: red; font: bold;" id="div1"></div>
+         </td>
+         
+      </tr>
+
+      <tr>
+        <td>Enter number 2</td>
+        <td>
+           <input type="number" id="num2">
+        </td>
+        <td>
+            <div style="color: red; font: bold;" id="div2"></div>
+         </td>
+      </tr>
+
+
+
+      <tr>
+        <td>Result</td>
+        <td>
+           <input type="number" id="res">
+        </td>
+        
+      </tr>
+
+
+
+      <tr>
+        <td>
+            <input type="button"  value="Addition" id="Add"  onclick="cal(1)">
+        </td>
+        <td>
+            <input type="button" value="Substraction" id="Sub" onclick="cal(2)">
+        </td>
+        <td>
+            <input type="button" value="Multiplication" id="Mul" onclick="cal(3)">
+        </td>
+        <td>
+            <input type="button" value="Division" id="div" onclick="cal(4)">
+        </td>
+      </tr>
+
+
+    </table>   
+
+    <script>
+      function cal(flag)
+      {
+        var a=document.getElementById("num1");
+        var b=document.getElementById("num2");
+        var c=document.getElementById("res");
+        var result=0;
+        var d=document.getElementById("div1");
+        var q=document.getElementById("div2"); 
+
+
+        switch (flag) 
+        {
+            
+            case 1:
+                {    
+                    if (a.value=="")
+                    {
+                   
+                       d.innerText="value required";
+
+                    }
+                    else if(b.value=="")
+                    {
+                        q.innerText="value required";
+                    }
+                    else
+                    {                                 
+                     result=-(-a.value-b.value);
+                     c.value=result; 
+                     d.innerText=""; 
+                     q.innerText="";
+                   } 
+                }
+                break;
+
+
+            case 2:
+                {
+                    if (a.value=="")
+                    {
+                   
+                       d.innerText="value required";
+
+                    }
+                    else if(b.value=="")
+                    {
+                        q.innerText="value required";
+                    }
+                   else
+                   {
+                    result=a.value-b.value;
+                        c.value=result;
+                        d.innerText=""; 
+                     q.innerText="";
+                   }
+                
+                }
+                break;
+
+            case 3:
+                {
+                    if (a.value=="")
+                    {
+                   
+                       d.innerText="value required";
+
+                    }
+                    else if(b.value=="")
+                    {
+                        q.innerText="value required";
+                    }
+                      
+                 else
+                 {
+                    result=a.value*b.value;
+                        c.value=result;
+                        d.innerText=""; 
+                     q.innerText="";
+                 } 
+            }
+                break;
+
+                
+            case 4:
+                {
+                
+                    if (a.value=="")
+                    {
+                   
+                       d.innerText="value required";
+
+                    }
+                    else if(b.value=="")
+                    {
+                        q.innerText="value required";
+                    }
+                    else
+                    {
+                    result=a.value/b.value;
+                        c.value=result;
+                        d.innerText=""; 
+                     q.innerText="";
+                    }
+                }
+                break;
+        
+        }
+
+      }
+
+    </script>
+</center> 
+</body>
+
+</html>
